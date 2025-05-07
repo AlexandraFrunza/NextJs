@@ -8,7 +8,7 @@ import Loading from "./loading";
 const SingleBlogPost = ({ id }: { id: string }) => {
   const { data, isLoading } = useQuery<BlogPost>({
     queryKey: ["blog-post"],
-    queryFn: () => getData(`/posts/${id}`),
+    queryFn: () => getData(`posts/${id}`),
   });
 
   return (
